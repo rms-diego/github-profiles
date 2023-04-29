@@ -1,11 +1,10 @@
-import Head from "next/head";
-import { FormEvent, useEffect } from "react";
+import { FormEvent } from "react";
 
 import styles from "@/styles/pages/home/styles.module.scss";
 import Input from "@/components/Input";
-import Footer from "@/components/Footer";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { Layout } from "@/Layout";
 
 export default function Home() {
   const { push } = useRouter();
@@ -28,11 +27,7 @@ export default function Home() {
   };
 
   return (
-    <>
-      <Head>
-        <title>Github profiles</title>
-      </Head>
-
+    <Layout title="Github Profiles | home">
       <main className={styles.mainContainer}>
         <h1>Github Profiles</h1>
 
@@ -46,8 +41,6 @@ export default function Home() {
           <button type="submit">Search</button>
         </form>
       </main>
-
-      <Footer />
-    </>
+    </Layout>
   );
 }
