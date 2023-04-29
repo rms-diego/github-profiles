@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import styles from "@/styles/pages/home/styles.module.scss";
 import Input from "@/components/Input";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
           <button type="submit">Search</button>
         </form>
       </main>
+
+      <Footer />
     </>
   );
 }
