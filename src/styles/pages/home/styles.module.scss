@@ -1,0 +1,43 @@
+.mainContainer {
+  min-width: 40vw;
+  border-radius: 8px;
+  min-height: 40vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--white);
+
+  h1 {
+    color: var(--black);
+    font-size: 2rem;
+  }
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+  gap: 1rem;
+
+  button {
+    width: 60%;
+    align-self: center;
+    padding: 0.8rem 0;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: bold;
+
+    background-color: var(--gray-500);
+
+    &:hover {
+      opacity: 0.7;
+      transition: 500ms;
+    }
+  }
+}
