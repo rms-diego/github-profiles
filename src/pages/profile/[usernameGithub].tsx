@@ -3,7 +3,7 @@ import { GetServerSideProps } from "next";
 import { responseApiSchema, DataType } from "@/@types";
 
 import axios from "axios";
-import Error from "next/error";
+import Error from "@/pages/_error";
 
 import styles from "@/styles/pages/profile/styles.module.scss";
 import Image from "next/image";
@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export default function Profile({ githubInfo, notFound }: DataType) {
   if (notFound) {
-    return <Error statusCode={404} />;
+    return <Error />;
   }
 
   return (
@@ -51,7 +51,6 @@ export default function Profile({ githubInfo, notFound }: DataType) {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { usernameGithub } = context.params!;
-  console.log(usernameGithub);
 
   try {
     const response = await axios.get(

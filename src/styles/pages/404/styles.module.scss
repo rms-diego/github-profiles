@@ -1,0 +1,18 @@
+.title {
+  color: var(--white);
+}
+
+.anchor {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem;
+  background-color: var(--white);
+
+  &:hover {
+    opacity: 0.7;
+    transition: 200ms;
+  }
+}
